@@ -28,11 +28,32 @@
 
     <style>
       #nameStyle {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serifs;
         font-size: 3.5rem;
       }
     </style>
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const swoopItems = document.querySelectorAll(".swoop");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target); // Animate only once
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      swoopItems.forEach((item) => {
+        observer.observe(item);
+      });
+    });
+  </script>
 
   <body id="page-top">
     <!-- Navigation-->
@@ -70,7 +91,6 @@
         </div>
       </div>
     </nav>
-
     <!-- Masthead-->
     <header class="masthead">
       <div
@@ -87,11 +107,258 @@
         </div>
       </div>
     </header>
-
     <section class="projects-section bg-black" id="projects">
       <div class="container px-4 px-lg-5">
-        <!-- your project sections with images having class="swoop" already -->
-        <!-- ... all the content you have ... -->
+        <!-- Year 2025 -->
+        <h2
+          class="text-white text-center mb-5"
+          style="font-family: 'Nunito', sans-serif"
+        >
+          2025
+        </h2>
+        <div class="row gx-4 gy-4 justify-content-center mb-5">
+          <div class="col-md-6 col-lg-5">
+            <img
+              src="assets/img/Veil 2(LQ).jpg"
+              alt="Veil 2"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Veil
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <img
+              src="assets/img/IMG_1949_2.jpg"
+              alt="Duck"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Trumpeter Swans
+            </h5>
+          </div>
+        </div>
+
+        <!-- Year 2024 -->
+        <h2
+          class="text-white text-center mb-5"
+          style="font-family: 'Nunito', sans-serif"
+        >
+          2024
+        </h2>
+        <div class="row gx-4 gy-4 justify-content-center mb-5">
+          <div class="col-md-6 col-lg-5">
+            <img
+              src="assets/img/The Ledge 2(LQ).jpg"
+              alt="The Ledge"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              The Ledge
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <img
+              src="assets/img/IMG_8845 2(LQ).jpg"
+              alt="Serenity"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Serenity in the Valley
+            </h5>
+            <img
+              class="img-fluid mt-4 swoop"
+              src="assets/img/IMG_6798.jpg"
+              alt="Drawing from 2024"
+            />
+            <h5
+              class="mt-2 text-white"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Redhead Ducks
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img
+              src="assets/img/Arianna Dress_03(LQ).jpg"
+              alt="Dress 3D"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Dress (3D Print)
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img
+              src="assets/img/Dress Front(LQ).jpg"
+              alt="Dress Front"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Dress (Front)
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img
+              src="assets/img/IMG_2963.jpg"
+              alt="Once a Girl"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Once a Girl
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img
+              src="assets/img/IMG_2946.jpg"
+              alt="Whirl"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Whirl
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img
+              src="assets/img/AriannaSunwork7pt2.png"
+              alt="Threads"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Mother's Threads
+            </h5>
+          </div>
+        </div>
+
+        <!-- Year 2023 -->
+        <h2
+          class="text-white text-center mb-5"
+          style="font-family: 'Nunito', sans-serif"
+        >
+          2023
+        </h2>
+        <div class="row gx-4 gy-4 justify-content-center mb-5">
+          <div class="col-md-8">
+            <img
+              src="assets/img/AriannaSun.jpg"
+              alt="Dance of DunHuang"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Dance of DunHuang
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <img
+              src="assets/img/Chicken and Flowers_Arianna Sun_28X22(LQ).jpg"
+              alt="Chicken and Flowers"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Chicken and Flowers
+            </h5>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <img
+              src="assets/img/Fused in Lotus(LQ).jpg"
+              alt="Fused in Lotus"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Fused in Lotus
+            </h5>
+          </div>
+          <div class="col-md-8">
+            <img
+              src="assets/img/Misty Stroll.jpg"
+              alt="Misty Stroll"
+              class="img-fluid rounded swoop"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Cinnamon Teal Duck
+            </h5>
+          </div>
+        </div>
+
+        <!-- Year 2022 -->
+        <h2
+          class="text-white text-center mb-5"
+          style="font-family: 'Nunito', sans-serif"
+        >
+          2022
+        </h2>
+        <div class="row gx-4 gy-4 justify-content-center mb-5">
+          <!-- Orchids -->
+          <div class="col-md-6 col-lg-4">
+            <img
+              src="assets/img/Orchids_Arianna Sun_19x21(LQ).jpg"
+              alt="Orchids by Arianna Sun"
+              class="img-fluid rounded swoop"
+              style="max-height: 500px; object-fit: cover"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Orchids
+            </h5>
+          </div>
+
+          <!-- Blue Paradox -->
+          <div class="col-md-6 col-lg-4">
+            <img
+              src="assets/img/Blue Paradox - Edited.jpg"
+              alt="Blue Paradox by Arianna Sun"
+              class="img-fluid rounded swoop"
+              style="max-height: 500px; object-fit: cover"
+            />
+            <h5
+              class="mt-2 text-white text-center"
+              style="font-family: 'Nunito', sans-serif"
+            >
+              Blue Paradox
+            </h5>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -113,7 +380,6 @@
         <img class="img-fluid" src="assets/img/insta5.PNG" alt="..." />
       </div>
     </section>
-
     <!-- Signup-->
     <section class="signup-section" id="signup">
       <div class="container px-4 px-lg-5">
@@ -121,11 +387,19 @@
           <div class="col-md-10 col-lg-8 mx-auto text-center">
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Feel Free to Contact Me</h2>
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- * * SB Forms Contact Form * *-->
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- This form is pre-integrated with SB Forms.-->
+            <!-- To make this form functional, sign up at-->
+            <!-- https://startbootstrap.com/solution/contact-forms-->
+            <!-- to get an API token!-->
             <form
               class="form-signup"
               id="contactForm"
               data-sb-form-api-token="API_TOKEN"
             >
+              <!-- Email address input-->
               <div class="row input-group-newsletter">
                 <div class="col">
                   <input
@@ -159,19 +433,13 @@
               >
                 Email is not valid.
               </div>
+              <!-- Submit success message-->
+              <!---->
+              <!-- This is what your users will see when the form-->
+              <!-- has successfully submitted-->
               <div class="d-none" id="submitSuccessMessage">
                 <div class="text-center mb-3 mt-2 text-white">
                   <div class="fw-bolder">Form submission successful!</div>
-                  To activate this form, sign up at
-                  <br />
-                  <a href="https://startbootstrap.com/solution/contact-forms"
-                    >https://startbootstrap.com/solution/contact-forms</a
-                  >
-                </div>
-              </div>
-              <div class="d-none" id="submitErrorMessage">
-                <div class="text-center text-danger mb-3 mt-2">
-                  Error sending message!
                 </div>
               </div>
             </form>
@@ -179,43 +447,5 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer-->
-    <footer class="footer bg-black small text-center text-white-50">
-      <div class="container px-4 px-lg-5">
-        Copyright &copy; Arianna Sun 2025
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-
-    <!-- swoop animation JS -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const swoopItems = document.querySelectorAll(".swoop");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-                observer.unobserve(entry.target); // Animate only once
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
-
-        swoopItems.forEach((item) => {
-          observer.observe(item);
-        });
-      });
-    </script>
-
-    <!-- SB Forms JS -->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>
