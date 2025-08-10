@@ -33,6 +33,28 @@
       }
     </style>
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const swoopItems = document.querySelectorAll(".swoop");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target); // Animate only once
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      swoopItems.forEach((item) => {
+        observer.observe(item);
+      });
+    });
+  </script>
+
   <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -99,7 +121,8 @@
             <img
               src="assets/img/Veil 2(LQ).jpg"
               alt="Veil 2"
-              class="img-fluid rounded"
+              class="img-fluid rounded swoop left"
+            />
             />
             <h5
               class="mt-2 text-white text-center"

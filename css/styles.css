@@ -11202,3 +11202,16 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+/* Start hidden/off-screen at bottom */
+.swoop {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Animate to normal position */
+.swoop.show {
+  opacity: 1;
+  transform: translateY(0);
+}
